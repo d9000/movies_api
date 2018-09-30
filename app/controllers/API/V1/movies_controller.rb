@@ -24,8 +24,11 @@ class API::V1::MoviesController < ApplicationController
     end
     def destroy
         movie = set_movie 
-        movie.destroy
-        head 204
+        if movie.destroy
+            head 204
+        else
+            render json: { errors: movie.errors }, status: 422
+        end
     end
 private
     def set_movie
