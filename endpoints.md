@@ -10,7 +10,7 @@ password
 ```
 
 **POST**   /oauth/revoke  
-To revoke a sesson.  
+To revoke a session.  
 Parameters:
 ```
 access_token
@@ -99,24 +99,152 @@ access_token
 id
 ```
 
-**GET**    /api/v1/people/:person_id/movies_as_actor
+**GET** /api/v1/people/:person_id/movies_as_actor  
+To get a list of movies where a person has actor/actress role.  
+Parameters:
+```
+person_id
+```
 
+**POST**   /api/v1/people/:person_id/movies_as_actor  
+To add a person to a movie as actor/actress role.  
+Parameters:
+```
+person_id
+access_token
+id
+```
 
-POST   /api/v1/people/:person_id/movies_as_actor
-DELETE /api/v1/people/:person_id/movies_as_actor/:id
-GET    /api/v1/people/:person_id/movies_as_director
-POST   /api/v1/people/:person_id/movies_as_director
-DELETE /api/v1/people/:person_id/movies_as_director/:id
-GET    /api/v1/people/:person_id/movies_as_producer
-POST   /api/v1/people/:person_id/movies_as_producer
-DELETE /api/v1/people/:person_id/movies_as_producer/:id
-GET    /api/v1/movies/:movie_id/casting
-POST   /api/v1/movies/:movie_id/casting
-DELETE /api/v1/movies/:movie_id/casting/:id
-GET    /api/v1/movies/:movie_id/directors
-POST   /api/v1/movies/:movie_id/directors
-DELETE /api/v1/movies/:movie_id/directors/:id
-GET    /api/v1/movies/:movie_id/producers
-POST   /api/v1/movies/:movie_id/producers
-DELETE /api/v1/movies/:movie_id/producers/:id
+**DELETE** /api/v1/people/:person_id/movies_as_actor/:id  
+To remove a person from a movie as an actor/actress.  
+Parameters:
+```
+person_id
+access_token
+id
+```
 
+**GET**    /api/v1/people/:person_id/movies_as_director  
+To get a list of movies where a person has director role.  
+Parameters:
+```
+person_id
+```
+
+**POST**   /api/v1/people/:person_id/movies_as_director  
+To add a person to a movie as director role.  
+Parameters:
+```
+person_id
+access_token
+id
+```
+
+**DELETE** /api/v1/people/:person_id/movies_as_director/:id  
+To remove a person from a movie as a director.  
+Parameters:
+```
+person_id
+access_token
+id
+```
+
+**GET**    /api/v1/people/:person_id/movies_as_producer  
+To get a list of movies where a person has producer role.  
+Parameters:
+```
+person_id
+```
+
+**POST**   /api/v1/people/:person_id/movies_as_producer  
+To add a person to a movie as producer role.  
+Parameters:
+```
+person_id
+access_token
+id
+```
+
+**DELETE** /api/v1/people/:person_id/movies_as_producer/:id  
+To remove a person from a movie as a producer.  
+Parameters:
+```
+person_id
+access_token
+id
+```
+
+**GET**    /api/v1/movies/:movie_id/casting  
+To get all actors and actress from a movie.  
+Parameters:
+```
+movie_id
+```
+
+**POST**   /api/v1/movies/:movie_id/casting  
+To add an actor or actress to a movie.
+Parameters:
+```
+movie_id
+access_token
+id
+```
+
+**DELETE** /api/v1/movies/:movie_id/casting/:id  
+To remove an actor or actress from a movie.  
+Parameters:
+```
+movie_id
+access_token
+id
+```
+
+**GET**    /api/v1/movies/:movie_id/directors  
+To get all directors from a movie.  
+Parameters:
+```
+movie_id
+```
+
+**POST**   /api/v1/movies/:movie_id/directors  
+To add a director to a movie.
+Parameters:
+```
+movie_id
+access_token
+id
+```
+
+**DELETE** /api/v1/movies/:movie_id/directors/:id  
+To remove a director from a movie.  
+Parameters:
+```
+movie_id
+access_token
+id
+```
+
+**GET**    /api/v1/movies/:movie_id/producers  
+To get all producers from a movie.  
+Parameters:
+```
+movie_id
+```
+
+**POST**   /api/v1/movies/:movie_id/producers  
+To add a producer to a movie.
+Parameters:
+```
+movie_id
+access_token
+id
+```
+
+**DELETE** /api/v1/movies/:movie_id/producers/:id  
+To remove a producer from a movie.  
+Parameters:
+```
+movie_id
+access_token
+id
+```
