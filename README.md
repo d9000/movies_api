@@ -1,32 +1,34 @@
-# README
+# Movies shop Apis  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The list of all endpoints and methods: [endpoints.md](endpoints.md)  
 
-Things you may want to cover:
+Here is a description of all frameworks/gems used in the current app  
 
-devplan
+```ruby
+gem 'active_model_serializers'
+```  
+Active Model Serializers is a gem used to serialize model in the app. I choose over jbuilder or fast_jsonapi because it is easy to customize.  
 
-create models
-create relations
-create controllers
-    namespacing
-    versioning
-    build json
+```ruby
+gem 'bcrypt'
+```
+Bcrypt is used to provide password digest to the User model. Bcrypt is an encryption algorithm for password hashing.  
 
+```ruby
+gem 'doorkeeper'
+```  
+Doorkeeper gem is a gem for provide access token authorization to resources in the API. 
 
-add authnetication
-    devise 
-    jwt
-    doorkeeper
+```ruby
+gem 'rubocop'
+```
+Rubocop gem, is a Ruby code analyzer and formatter for implementing best practices. Also used for code linting.
 
-add autorization
+# Demo
 
-config middleware
+The application is deployed in Heroku at: 
 
-rubocop
+To run the demo you can use the following credentials:  
 
-add react interface (?)
-
-deploy to heroku
-* ...
+username: me@example.com
+password: 12345678

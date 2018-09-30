@@ -11,8 +11,7 @@ Doorkeeper.configure do
   end
 
   resource_owner_from_credentials do
-    User.find_by(email: params[:username])
-       &.authenticate(params[:password]) || nil
+    User.find_by(email: params[:username]) &.authenticate(params[:password]) || nil
   end
   
   # If you didn't skip applications controller from Doorkeeper routes in your application routes.rb
