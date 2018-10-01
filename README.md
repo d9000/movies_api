@@ -26,9 +26,9 @@ Rubocop gem, is a Ruby code analyzer and formatter for implementing best practic
 
 # Demo
 
-The application is deployed in Heroku at: 
+The application is deployed in Heroku at: [https://pacific-journey-34099.herokuapp.com/api/v1/movies](https://pacific-journey-34099.herokuapp.com/api/v1/movies)
 
 To run the demo you can use the following credentials:  
 
-username: me@example.com
+username: me@example.com  
 password: 12345678
